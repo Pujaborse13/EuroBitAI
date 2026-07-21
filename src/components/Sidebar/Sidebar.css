@@ -1,0 +1,220 @@
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #072a71 0%,
+    #0a347f 50%,
+    #072a71 100%
+  );
+
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 18px;
+  box-sizing: border-box;
+  overflow: auto;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 5px;
+}
+
+.logo-icon {
+  color: #ffffff;
+}
+
+.logo {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.logo-subtitle {
+  margin-top: 2px;
+  font-size: 13px;
+  color: #c9d8ff;
+  letter-spacing: 0.3px;
+}
+
+/* ===========================
+   MENU GROUP
+=========================== */
+
+.menu-group {
+  margin-bottom: 7px;
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 10px;
+  color: #acbfee;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.section-title svg {
+  color: #61b5ff;
+}
+
+/* ===========================
+   LIST
+=========================== */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1px 5px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+li svg {
+  color: #ffffff;
+  transition: all 0.25s ease;
+
+}
+
+
+
+/* ===========================
+   POWER OF 10 CARD
+=========================== */
+
+.power-card {
+    margin-top: auto;
+    background: linear-gradient(
+        180deg,
+        #184BAF 0%,
+        #1A56C7 100%
+    );
+
+    border-radius: 16px;
+    padding: 8px;
+    color: white;
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.15),
+        0 12px 25px rgba(0,0,0,.25);
+}
+
+.power-card h4{
+    margin:0;
+    font-size:16px;
+    font-weight:700;
+}
+
+.power-subtitle{
+    margin-top:2px;
+    color:#DCE8FF;
+    font-size:12px;
+    line-height:1.5;
+
+}
+
+.power-number{
+    margin-top:2px;
+    font-size:30px;
+    font-weight:800;
+    color:white;
+}
+
+.power-text{
+    margin-top:2px;
+    color:#E6EEFF;
+    font-size:12px;
+    line-height:1.5;
+}
+
+.power-btn{
+    margin-top:8px;
+    width:90%;
+    border:none;
+    outline:none;
+    padding:8px;
+    border-radius:25px;
+    background:white;
+    color:#1748B2;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.power-btn:hover{
+    background:#EEF5FF;
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   HOVER
+=========================== */
+
+li:hover {
+
+  background: rgba(255,255,255,0.10);
+  transform: translateX(4px);
+
+}
+
+li:hover svg{
+  color:#61B5FF;
+
+}
+
+/* ===========================
+   ACTIVE ITEM
+=========================== */
+
+/* .active {
+  background: rgba(97,181,255,0.18);
+  border-left: 4px solid #39c6ff;
+  padding-left: 8px;
+  font-weight: 600;
+
+}
+
+.active svg{
+  color:#39C6FF;
+} */
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
