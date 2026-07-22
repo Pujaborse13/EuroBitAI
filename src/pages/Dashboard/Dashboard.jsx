@@ -1,8 +1,15 @@
-function Dashboard() {
-  return (
-    <div style={{ padding: "20px" }}>
-    </div>
-  );
+function Dashboard(){
+
+    return(
+
+        <div>
+
+            <h1>Dashboard</h1>
+
+        </div>
+
+    )
+
 }
 
 export default Dashboard;
