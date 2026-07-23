@@ -1,7 +1,6 @@
 import "./AIAssistant.css";
 import { useState } from "react";
 
-
 import {
   Send,
   Mic,
@@ -16,10 +15,12 @@ function AIAssistant() {
     const [response,setResponse] = useState("");
 
 
+
     const handleSend =()=>{
 
 
         if(prompt.trim()==="") return;
+
 
 
         if(prompt.toLowerCase().includes("payment application slow")){
@@ -42,6 +43,7 @@ function AIAssistant() {
 
 
 
+
             <div className="section">
 
                 <h5>Status</h5>
@@ -51,6 +53,7 @@ function AIAssistant() {
                 </p>
 
             </div>
+
 
 
 
@@ -68,18 +71,23 @@ function AIAssistant() {
                         CPU utilization reached 92%
                     </li>
 
+
                     <li>
                         Database connection pool exhausted
                     </li>
+
 
                     <li>
                         2 backend pods restarted recently
                     </li>
 
+
                 </ul>
 
 
             </div>
+
+
 
 
             <div className="section">
@@ -96,13 +104,16 @@ function AIAssistant() {
                         Restart payment-service pods
                     </li>
 
+
                     <li>
                         Increase DB connection pool
                     </li>
 
+
                     <li>
                         Check JVM Heap usage
                     </li>
+
 
                     <li>
                         Review deployment logs
@@ -115,6 +126,7 @@ function AIAssistant() {
             </div>
 
 
+
             </>
 
 
@@ -122,11 +134,15 @@ function AIAssistant() {
 
 
         }
+
+
         else{
 
 
             setResponse(
+
                 "Sorry, I don't have an answer for this query yet."
+
             );
 
 
@@ -135,279 +151,382 @@ function AIAssistant() {
 
     }
 
+
+
+
+
+
     const handleBack = () => {
-     setResponse("");
-        };
 
-const handleSuggestion = (type) => {
+        setResponse("");
 
+    };
 
-    if(type === "infrastructure") {
 
 
-        setResponse(
 
-        <>
 
+    const handleSuggestion = (type) => {
 
-        <div className="status-card">
 
-            <h4>🖥️ Infrastructure Health</h4>
 
-            <span className="severity low">
-                HEALTHY
-            </span>
+        if(type === "infrastructure") {
 
-        </div>
 
 
+            setResponse(
 
-        <div className="section">
+            <>
 
-            <h5>Status</h5>
 
-            <p>
-                All critical infrastructure components are operating normally.
-            </p>
 
-        </div>
+            <div className="status-card">
 
 
+                <h4>
+                    🖥️ Infrastructure Health
+                </h4>
 
-        <div className="section">
 
-            <h5>System Metrics</h5>
+                <span className="severity low">
+                    HEALTHY
+                </span>
 
-            <ul>
 
-                <li>
-                    CPU Utilization : 48%
-                </li>
+            </div>
 
-                <li>
-                    Memory Usage : 62%
-                </li>
 
-                <li>
-                    Active Kubernetes Pods : 124
-                </li>
 
-                <li>
-                    Application Availability : 99.98%
-                </li>
 
-            </ul>
 
+            <div className="section">
 
-        </div>
 
+                <h5>
+                    Status
+                </h5>
 
 
-        <div className="section">
+                <p>
+                    All critical infrastructure components are operating normally.
+                </p>
 
-            <h5>AI Recommendation</h5>
 
-            <p>
-                No immediate action required. Continue monitoring application workloads.
-            </p>
+            </div>
 
-        </div>
 
 
-        </>
 
-        );
 
+            <div className="section">
 
-    }
 
+                <h5>
+                    System Metrics
+                </h5>
 
 
-    else if(type === "incidents") {
+                <ul>
 
+                    <li>
+                        CPU Utilization : 48%
+                    </li>
 
 
-        setResponse(
+                    <li>
+                        Memory Usage : 62%
+                    </li>
 
-        <>
 
+                    <li>
+                        Active Kubernetes Pods : 124
+                    </li>
 
-        <div className="status-card">
 
-            <h4>📋 Today's Incident Summary</h4>
+                    <li>
+                        Application Availability : 99.98%
+                    </li>
 
-            <span className="severity medium">
-                5 INCIDENTS
-            </span>
 
-        </div>
+                </ul>
 
 
+            </div>
 
-        <div className="section">
 
-            <h5>Summary</h5>
 
-            <p>
-                AI analyzed today's operational incidents and generated the summary.
-            </p>
 
-        </div>
 
+            <div className="section">
 
 
+                <h5>
+                    AI Recommendation
+                </h5>
 
-        <div className="section">
 
-            <h5>Incident Overview</h5>
+                <p>
+                    No immediate action required. Continue monitoring application workloads.
+                </p>
 
-            <ul>
 
-                <li>
-                    Payment Gateway latency issue - Resolved
-                </li>
+            </div>
 
-                <li>
-                    Database connection timeout - Monitoring
-                </li>
 
-                <li>
-                    API authentication failure - Closed
-                </li>
 
-                <li>
-                    Batch processing delay - Investigating
-                </li>
+            </>
 
 
-            </ul>
+            );
 
 
-        </div>
+        }
 
 
 
+        else if(type === "incidents") {
 
-        <div className="section">
 
-            <h5>AI Insight</h5>
 
-            <p>
-                Majority of incidents are related to database and service dependency performance.
-            </p>
+            setResponse(
 
+            <>
 
-        </div>
 
 
-        </>
+            <div className="status-card">
 
-        );
 
+                <h4>
+                    📋 Today's Incident Summary
+                </h4>
 
 
-    }
+                <span className="severity medium">
+                    5 INCIDENTS
+                </span>
 
 
+            </div>
 
-    else if(type === "servers") {
 
 
 
-        setResponse(
 
-        <>
+            <div className="section">
 
 
-        <div className="status-card">
+                <h5>
+                    Summary
+                </h5>
 
-            <h4>🖧 Server Status Overview</h4>
 
-            <span className="severity low">
-                ONLINE
-            </span>
+                <p>
+                    AI analyzed today's operational incidents and generated the summary.
+                </p>
 
-        </div>
 
+            </div>
 
 
 
-        <div className="section">
 
-            <h5>Environment Status</h5>
 
-            <p>
-                All production servers are reachable.
-            </p>
+            <div className="section">
 
-        </div>
 
+                <h5>
+                    Incident Overview
+                </h5>
 
 
+                <ul>
 
-        <div className="section">
 
+                    <li>
+                        Payment Gateway latency issue - Resolved
+                    </li>
 
-            <h5>
-                Server Health
-            </h5>
 
+                    <li>
+                        Database connection timeout - Monitoring
+                    </li>
 
-            <ul>
 
-                <li>
-                    Application Servers : 32/32 Healthy
-                </li>
+                    <li>
+                        API authentication failure - Closed
+                    </li>
 
 
-                <li>
-                    Database Servers : 8/8 Healthy
-                </li>
+                    <li>
+                        Batch processing delay - Investigating
+                    </li>
 
 
-                <li>
-                    Middleware Servers : 15/15 Healthy
-                </li>
+                </ul>
 
 
-                <li>
-                    Failed Health Checks : 0
-                </li>
+            </div>
 
 
-            </ul>
 
 
-        </div>
 
+            <div className="section">
 
 
-        <div className="section">
+                <h5>
+                    AI Insight
+                </h5>
 
-            <h5>
-                Recommendation
-            </h5>
 
+                <p>
+                    Majority of incidents are related to database and service dependency performance.
+                </p>
 
-            <p>
-                Continue normal operations. No server remediation required.
-            </p>
 
+            </div>
 
-        </div>
 
 
-        </>
+            </>
 
-        );
 
+            );
 
 
-    }
+        }
 
+                else if(type === "servers") {
 
-};
+
+
+            setResponse(
+
+            <>
+
+
+
+            <div className="status-card">
+
+
+                <h4>
+                    🖧 Server Status Overview
+                </h4>
+
+
+                <span className="severity low">
+                    ONLINE
+                </span>
+
+
+            </div>
+
+
+
+
+
+            <div className="section">
+
+
+                <h5>
+                    Environment Status
+                </h5>
+
+
+                <p>
+                    All production servers are reachable.
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div className="section">
+
+
+                <h5>
+                    Server Health
+                </h5>
+
+
+                <ul>
+
+
+                    <li>
+                        Application Servers : 32/32 Healthy
+                    </li>
+
+
+                    <li>
+                        Database Servers : 8/8 Healthy
+                    </li>
+
+
+                    <li>
+                        Middleware Servers : 15/15 Healthy
+                    </li>
+
+
+                    <li>
+                        Failed Health Checks : 0
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+
+
+
+
+            <div className="section">
+
+
+                <h5>
+                    Recommendation
+                </h5>
+
+
+                <p>
+                    Continue normal operations. No server remediation required.
+                </p>
+
+
+            </div>
+
+
+
+            </>
+
+
+            );
+
+
+        }
+
+
+    };
+
+
+
+
+
 return(
+
+
+<div className="ai-page">
+
+
+
+{/* ==========================
+        AI ASSISTANT CARD
+========================== */}
 
 
 <div className="ai-card">
@@ -428,6 +547,7 @@ Ask me anything in natural language.
 
 
 </div>
+
 
 
 
@@ -456,7 +576,12 @@ handleSend();
 
 placeholder="Example: Why is payment application slow since morning?"
 
+
 />
+
+
+
+
 
 <button className="mic-btn">
 
@@ -467,7 +592,9 @@ placeholder="Example: Why is payment application slow since morning?"
 
 
 
-<button 
+
+
+<button
 className="send-btn"
 onClick={handleSend}
 >
@@ -477,9 +604,17 @@ onClick={handleSend}
 </button>
 
 
+
+
 </div>
 
+
+
+
+
+
 {
+
 !response ?
 
 
@@ -487,44 +622,82 @@ onClick={handleSend}
 <div className="suggestions">
 
 
-<p className="suggestions-title"> Not sure what to ask? </p>
+<p className="suggestions-title">
+Not sure what to ask?
+</p>
+
 
 
 
 <div className="suggestion-list">
 
-<div className="suggestion-card" onClick={()=>handleSuggestion("infrastructure")}
->🖥️ Infrastructure Health
+
+
+<div 
+className="suggestion-card"
+onClick={()=>handleSuggestion("infrastructure")}
+>
+
+🖥️ Infrastructure Health
+
 
 </div>
 
 
-<div className="suggestion-card" onClick={()=>handleSuggestion("incidents")}>
+
+
+
+<div
+className="suggestion-card"
+onClick={()=>handleSuggestion("incidents")}
+>
+
 📋 Summarize Today's Incidents
 
+
 </div>
 
-<div className="suggestion-card" onClick={()=>handleSuggestion("servers")}>
+
+
+
+
+<div
+className="suggestion-card"
+onClick={()=>handleSuggestion("servers")}
+>
 
 🖧 Check Status of All Servers
 
-</div>
-</div>
 
 </div>
+
+
+
+</div>
+
+
+</div>
+
+
 
 :
 
+
 <div className="ai-response">
 
-<button 
+
+<button
 className="back-btn"
 onClick={handleBack}
 >
 
+
 <ArrowLeft size={20}/>
 
+
 </button>
+
+
 
 
 <div className="response-content">
@@ -537,6 +710,7 @@ onClick={handleBack}
 </div>
 
 
+
 }
 
 
@@ -544,7 +718,93 @@ onClick={handleBack}
 </div>
 
 
+
+
+
+
+
+{/* ==========================
+        TODAY'S AI INSIGHTS CARD
+========================== */}
+
+<div className="insights-card">
+<div className="insights-header">
+
+<div>
+    <h2>Today's AI Insights</h2>
+    <p>Operational intelligence generated by AI</p>
+</div>
+
+<div className="ai-status">● Live</div>
+
+</div>
+
+<div className="insights-grid">
+
+    <div className="insight-box">
+        <h3>24</h3>
+        <span>Incidents Analyzed</span>
+        <p className="success">↓ 18% vs yesterday</p>
+    </div>
+
+<div className="insight-box">
+
+
+<h3>99.98%</h3>
+
+
+<span>System Availability</span>
+
+
+<p className="success">Stable</p>
+</div>
+
+<div className="insight-box">
+    <h3>5</h3>
+    <span>Active Issues</span>
+    <p className="warning">Requires Attention</p>
+
+</div>
+
+<div className="insight-box">
+
+    <h3>12</h3>
+    <span>AI Recommendations</span>
+    <p className="success">Generated Today</p>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div className="prediction-box">
+
+
+<h4>🤖 AI Prediction</h4>
+
+
+
+<p>Based on current system behavior, no critical outage is expected in the next 24 hours.</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
 )
+
 
 
 }

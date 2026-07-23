@@ -1,7 +1,274 @@
+.health-container{
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
+
+}
+
+
+
+/* =====================
+ SYSTEM HEALTH
+===================== */
+
+
 .health-card{
 
 
-height:500px;
+background:white;
+
+border-radius:20px;
+
+padding:20px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+
+}
+
+
+
+.health-header{
+
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+margin-bottom:10px;
+
+
+}
+
+
+
+.health-header h2{
+
+font-size:18px;
+
+color:#111827;
+
+margin:0;
+
+
+}
+
+
+.health-header span{
+
+
+color:#2354D8;
+
+font-size:13px;
+
+font-weight:600;
+
+cursor:pointer;
+
+
+}
+
+
+
+
+/* STATUS */
+
+
+.overall-status{
+
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+
+background:#F0FDF4;
+
+
+padding:15px;
+
+
+border-radius:14px;
+
+
+margin-bottom:20px;
+
+
+}
+
+
+.check-circle{
+
+height:30px;
+
+width:30px;
+
+
+border-radius:50%;
+
+
+background:#16A34A;
+
+
+color:white;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+font-weight:bold;
+
+
+}
+
+
+
+.overall-status h3{
+
+
+margin:0;
+
+font-size:14px;
+
+color:#15803D;
+
+
+}
+
+
+
+.overall-status p{
+
+
+margin:5px 0 0;
+
+font-size:12px;
+
+color:#6B7280;
+
+
+}
+
+
+
+
+
+/* SYSTEM ROW */
+
+
+.system-row{
+
+
+display:flex;
+
+align-items:center;
+
+
+padding:13px 5px;
+
+
+border-bottom:1px solid #E5E7EB;
+
+
+}
+
+
+
+.system-icon{
+
+
+width:35px;
+
+
+color:#6B7280;
+
+
+}
+
+
+
+.system-icon svg{
+
+
+width:18px;
+
+height:18px;
+
+
+}
+
+
+
+.system-name{
+
+
+flex:1;
+
+
+font-size:14px;
+
+color:#374151;
+
+
+}
+
+
+
+.system-value{
+
+
+font-size:14px;
+
+font-weight:600;
+
+color:#16A34A;
+
+
+}
+
+
+
+.updated{
+
+
+display:flex;
+
+justify-content:space-between;
+
+margin-top:15px;
+
+
+font-size:12px;
+
+color:#9CA3AF;
+
+
+}
+
+
+
+
+
+
+/* =====================
+ QUICK ACTIONS
+===================== */
+
+
+.quick-card{
+
 
 background:white;
 
@@ -9,60 +276,554 @@ border-radius:20px;
 
 padding:25px;
 
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
 
 
 }
 
 
-.health-card h2{
 
-color:#1B4DB8;
+.quick-card h2{
 
-margin-bottom:25px;
+
+font-size:18px;
+
+margin-bottom:20px;
+
+
+color:#111827;
+
 
 }
 
 
-.health-item{
 
+
+.action-grid{
+
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:15px;
+
+
+}
+
+
+
+
+.action-item{
+
+
+height:85px;
+
+
+border-radius:15px;
+
+
+background:#F8FAFC;
+
+
+display:flex;
+
+
+flex-direction:column;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+cursor:pointer;
+
+
+transition:.3s;
+
+
+}
+
+
+
+.action-item:hover{
+
+
+transform:translateY(-3px);
+
+
+background:#EEF4FB;
+
+
+}
+
+
+
+.action-icon{
+
+
+margin-bottom:8px;
+
+
+color:#2354D8;
+
+
+}
+
+
+
+.action-icon svg{
+
+
+width:22px;
+
+height:22px;
+
+
+}
+
+
+
+.action-item p{
+
+
+font-size:12px;
+
+margin:0;
+
+text-align:center;
+
+color:#374151;
+
+
+}
+
+/* =====================
+ SYSTEM HEALTH
+===================== */
+
+.health-card{
+
+background:white;
+
+border-radius:18px;
+
+padding:18px;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.08);
+
+}
+
+
+
+/* HEADER */
+
+.health-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:12px;
+
+}
+
+
+.health-header h2{
+
+font-size:16px;
+
+color:#111827;
+
+margin:0;
+
+}
+
+
+.health-header span{
+
+font-size:12px;
+
+}
+
+
+
+/* STATUS */
+
+.overall-status{
 
 display:flex;
 
 align-items:center;
 
-gap:20px;
+gap:12px;
 
-padding:20px;
+background:#F0FDF4;
 
-background:#F5F7FB;
+padding:10px;
 
-border-radius:15px;
+border-radius:12px;
 
-margin-bottom:15px;
-
-
-}
-
-
-.health-item svg{
-
-color:#1B4DB8;
+margin-bottom:12px;
 
 }
 
 
-.health-item p{
 
-color:#6B7280;
+.check-circle{
 
-font-size:14px;
+height:24px;
+
+width:24px;
+
+font-size:13px;
 
 }
 
 
-.health-item h3{
 
-margin-top:5px;
+
+.overall-status h3{
+
+font-size:13px;
+
+}
+
+
+
+.overall-status p{
+
+font-size:11px;
+
+margin-top:3px;
+
+}
+
+
+
+
+
+/* SYSTEM ROW */
+
+.system-row{
+
+padding:9px 2px;
+
+}
+
+
+
+.system-icon{
+
+width:30px;
+
+}
+
+
+
+.system-icon svg{
+
+width:16px;
+
+height:16px;
+
+}
+
+
+
+.system-name{
+
+font-size:12px;
+
+}
+
+
+
+.system-value{
+
+font-size:12px;
+
+}
+
+
+
+
+/* LAST UPDATED */
+
+.updated{
+
+margin-top:10px;
+
+font-size:11px;
+
+}
+
+
+
+/* =====================
+   SYSTEM HEALTH
+===================== */
+
+.health-card {
+
+    background:white;
+    border-radius:16px;
+    padding:14px;
+
+    box-shadow:
+    0 6px 20px rgba(0,0,0,.08);
+
+}
+
+
+/* HEADER */
+
+.health-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:8px;
+
+}
+
+
+.health-header h2{
+
+    font-size:15px;
+    margin:0;
+    color:#111827;
+
+}
+
+
+.health-header span{
+
+    font-size:11px;
+    color:#2354D8;
+
+}
+
+
+/* STATUS BOX */
+
+.overall-status{
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    background:#F0FDF4;
+
+    padding:8px;
+
+    border-radius:10px;
+
+    margin-bottom:8px;
+
+}
+
+
+.check-circle{
+
+    height:22px;
+    width:22px;
+
+    border-radius:50%;
+
+    background:#16A34A;
+
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:12px;
+
+}
+
+
+
+.overall-status h3{
+
+    font-size:12px;
+    margin:0;
+
+    color:#15803D;
+
+}
+
+
+
+.overall-status p{
+
+    font-size:10px;
+
+    margin:2px 0 0;
+
+}
+
+
+
+/* SYSTEM ROW */
+
+
+.system-row{
+
+    display:flex;
+    align-items:center;
+
+    padding:6px 2px;
+
+    border-bottom:1px solid #E5E7EB;
+
+}
+
+
+.system-icon{
+
+    width:25px;
+
+}
+
+
+
+.system-icon svg{
+
+    width:14px;
+    height:14px;
+
+}
+
+
+
+.system-name{
+
+    flex:1;
+
+    font-size:11px;
+
+}
+
+
+
+.system-value{
+
+    font-size:11px;
+
+    font-weight:600;
+
+}
+
+
+
+/* UPDATED */
+
+
+.updated{
+
+    margin-top:7px;
+
+    font-size:10px;
+
+    color:#9CA3AF;
+
+}
+
+
+.refresh-btn{
+
+cursor:pointer;
+
+font-size:16px;
+
+transition:.3s;
+
+}
+
+
+.refresh-btn:hover{
+
+transform:rotate(180deg);
+
+color:#2354D8;
+
+}
+
+/* SYSTEM ROW */
+
+.system-row{
+
+    display:flex;
+    align-items:center;
+
+    padding:8px 2px;
+
+    border-bottom:1px solid #E5E7EB;
+
+}
+
+
+.system-icon{
+
+    width:30px;
+
+}
+
+
+.system-icon svg{
+
+    width:18px;
+    height:18px;
+
+}
+
+
+.system-name{
+
+    flex:1;
+
+    font-size:15px;   /* increased */
+    color:#374151;
+
+}
+
+
+.system-value{
+
+    font-size:15px;   /* increased */
+    font-weight:700;
+
+    color:#16A34A;
+
+}
+
+
+.overall-status h3{
+
+    font-size:14px;
+
+}
+
+
+.overall-status p{
+
+    font-size:12px;
+
+}
+
+.health-header h2{
+
+    font-size:18px;
 
 }

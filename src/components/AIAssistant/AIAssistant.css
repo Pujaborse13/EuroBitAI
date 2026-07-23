@@ -4,24 +4,20 @@ background:white;
 
 border-radius:24px;
 
-padding:40px;
+padding:10px 30px 30px 30px;
 
 box-shadow:
 0 10px 30px rgba(0,0,0,.08);
-
 
 display:flex;
 
 flex-direction:column;
 
-
-height:520px;
+height:450px;
 
 overflow:hidden;
 
 }
-
-
 
 
 .ai-content{
@@ -85,16 +81,10 @@ border:2px solid #E6EAF2;
 
 
 border-radius:20px;
-
-
 padding:10px 14px;
-
-
 box-shadow:
 0 5px 15px rgba(0,0,0,.05);
-
-
-margin-bottom:20px;
+margin-bottom:2px;
 
 
 }
@@ -102,8 +92,6 @@ margin-bottom:20px;
 
 
 .search-box-ai input{
-
-
 flex:1;
 
 border:none;
@@ -122,8 +110,6 @@ color:#374151;
 
 
 .mic-btn{
-
-
 width:45px;
 
 height:45px;
@@ -141,10 +127,7 @@ color:#6B7280;
 
 
 
-
 .send-btn{
-
-
 width:36px;
 
 height:36px;
@@ -176,8 +159,6 @@ cursor:pointer;
 
 
 .send-btn:hover{
-
-
 background:#1B4DB8;
 
 
@@ -193,7 +174,6 @@ background:#1B4DB8;
 
 .suggestions{
 
-
 margin-top:5px;
 
 
@@ -203,27 +183,20 @@ margin-top:5px;
 
 .suggestions-title{
 
-
 font-size:15px;
 
 font-weight:600;
 
 color:#6B7280;
 
-
 margin-bottom:12px;
-
 
 }
 
 
-
 .suggestion-list{
-
-
 display:flex;
-
-gap:12px;
+gap:10px;
 
 
 }
@@ -231,38 +204,16 @@ gap:12px;
 
 
 .suggestion-card{
-
-
 flex:1;
-
-
 background:#F5F7FB;
-
-
 border:1px solid #E5E7EB;
-
-
 border-radius:12px;
-
-
 padding:15px;
-
-
 font-size:14px;
-
-
 font-weight:500;
-
-
 color:#374151;
-
-
 text-align:center;
-
-
 cursor:pointer;
-
-
 transition:.3s;
 
 
@@ -295,7 +246,7 @@ transform:translateY(-2px);
 .ai-response{
 
 
-margin-top:15px;
+margin-top:10px;
 
 
 background:#F8FAFC;
@@ -307,7 +258,7 @@ border:1px solid #DCE6F4;
 border-radius:16px;
 
 
-padding:20px;
+padding:10px;
 
 
 overflow-y:auto;
@@ -328,10 +279,10 @@ display:flex;
 
 align-items:center;
 
-gap:15px;
+gap:10px;
 
 
-margin-bottom:20px;
+margin-bottom:5px;
 
 
 }
@@ -345,9 +296,7 @@ width:55px;
 
 height:55px;
 
-
 border-radius:50%;
-
 
 background:#2354D8;
 
@@ -373,8 +322,6 @@ font-size:24px;
 
 
 .response-header h3{
-
-
 margin:0;
 
 color:#2354D8;
@@ -399,15 +346,11 @@ color:#6B7280;
 
 
 .status-card{
-
-
 display:flex;
 
 justify-content:space-between;
 
 align-items:center;
-
-
 margin-bottom:20px;
 
 
@@ -475,7 +418,6 @@ color:#16A34A;
 
 
 .section{
-
 
 margin-bottom:20px;
 
@@ -585,6 +527,398 @@ transition:.3s;
 background:#EEF4FB;
 
 transform:translateX(-3px);
+
+
+}
+
+
+/* ==========================
+   MAIN AI PAGE CONTAINER
+========================== */
+
+
+.ai-page{
+
+width:100%;
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+
+
+
+
+
+/* ==========================
+   TODAY'S AI INSIGHTS CARD
+========================== */
+
+
+.insights-card{
+
+
+background:white;
+
+
+border-radius:24px;
+
+
+padding:30px;
+
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+
+}
+
+
+
+
+
+/* HEADER */
+
+
+.insights-header{
+
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+
+margin-bottom:25px;
+
+
+}
+
+
+
+.insights-header h2{
+
+
+margin:0;
+
+
+font-size:26px;
+
+
+font-weight:700;
+
+
+color:#2354D8;
+
+
+}
+
+
+
+.insights-header p{
+
+
+margin-top:6px;
+
+
+font-size:14px;
+
+
+color:#6B7280;
+
+
+}
+
+
+
+.ai-status{
+
+
+background:#DCFCE7;
+
+
+color:#16A34A;
+
+
+padding:7px 16px;
+
+
+border-radius:20px;
+
+
+font-size:13px;
+
+
+font-weight:600;
+
+
+}
+
+
+
+
+
+
+/* ==========================
+   INSIGHTS GRID
+========================== */
+
+
+.insights-grid{
+
+
+display:grid;
+
+
+grid-template-columns:repeat(4,1fr);
+
+
+gap:10px;
+
+
+}
+
+
+
+
+
+.insight-box{
+
+
+background:#F8FAFC;
+
+
+border:1px solid #E5E7EB;
+
+
+border-radius:18px;
+
+
+padding:10px;
+
+transition:.3s;
+
+
+}
+
+
+
+
+
+.insight-box:hover{
+
+
+transform:translateY(-3px);
+
+box-shadow:
+0 8px 20px rgba(0,0,0,.06);
+
+
+}
+
+
+
+
+
+.insight-box h3{
+
+
+margin:0;
+font-size:30px;
+font-weight:600;
+color:#2354D8;
+
+
+}
+
+
+
+
+.insight-box span{
+
+
+display:block;
+
+
+margin-top:8px;
+
+
+font-size:14px;
+
+
+font-weight:500;
+
+
+color:#374151;
+
+
+}
+
+
+
+
+
+.success{
+
+
+margin-top:10px;
+
+
+font-size:13px;
+
+
+font-weight:600;
+
+
+color:#16A34A;
+
+
+}
+
+
+
+
+.warning{
+
+
+margin-top:10px;
+
+
+font-size:13px;
+
+
+font-weight:600;
+
+
+color:#D97706;
+
+
+}
+
+
+
+
+
+
+/* ==========================
+   AI PREDICTION BOX
+========================== */
+
+
+.prediction-box{
+
+
+margin-top:10px;
+
+
+background:#EEF4FB;
+
+
+border-radius:16px;
+
+
+padding:10px 11px;
+
+
+border-left:5px solid #2354D8;
+
+
+}
+
+
+
+
+
+.prediction-box h4{
+
+
+margin:0 0 8px;
+
+
+font-size:16px;
+
+
+color:#2354D8;
+
+
+}
+
+
+
+
+
+.prediction-box p{
+
+
+margin:0;
+
+
+font-size:14px;
+
+
+color:#374151;
+
+
+line-height:1.6;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+
+@media(max-width:1000px){
+
+
+.insights-grid{
+
+
+grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+.insights-grid{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+.ai-card{
+
+
+padding:25px;
+
+
+}
+
 
 
 }
