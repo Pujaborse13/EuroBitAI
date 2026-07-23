@@ -5,7 +5,7 @@ import {
   CircleUserRound,
 } from "lucide-react";
 
-function Navbar() {
+function Navbar({onUserClick}) {
   return (
     <div className="navbar">
 
@@ -23,7 +23,10 @@ function Navbar() {
         </div>
 
         {/* User Profile */}
-        <div className="user-profile">
+            <div 
+      className="user-profile"
+      onClick={onUserClick}
+>
           <CircleUserRound size={24} className="user-icon" /><span className="user-name">Kapil Gandhi</span>
         </div>
         
