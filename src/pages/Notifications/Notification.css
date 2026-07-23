@@ -1,0 +1,166 @@
+.notification-page{
+
+    padding:30px;
+
+    background:#F5F7FB;
+
+    min-height:calc(100vh - 72px);
+
+}
+
+
+.notification-page h1{
+
+    font-size:28px;
+
+    color:#111827;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.notification-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+.notification-card{
+
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+
+
+.notification-header{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+}
+
+
+.notification-header h3{
+
+    margin:0;
+
+    font-size:17px;
+
+}
+
+
+
+.notification-header span{
+
+
+    font-size:12px;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    background:#EEF2FF;
+
+}
+
+
+
+.notification-card p{
+
+    color:#6B7280;
+
+    margin:12px 0;
+
+}
+
+
+
+.notification-card small{
+
+    color:#9CA3AF;
+
+}
+
+
+
+/* Types */
+
+
+.notification-card.Critical{
+
+    border-left:5px solid red;
+
+}
+
+
+.notification-card.Warning{
+
+    border-left:5px solid orange;
+
+}
+
+
+.notification-card.Success{
+
+    border-left:5px solid green;
+
+}
+
+
+.notification-card.Info{
+
+    border-left:5px solid blue;
+
+}
+
+
+.notification-card.Security{
+
+    border-left:5px solid purple;
+
+}
+
+.notification-page{
+    padding:30px;
+    background:#F5F7FB;
+    height:calc(100vh - 72px); /* Navbar height */
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+.notification-page h1{
+    margin-bottom:20px;
+    flex-shrink:0;
+}
+
+.notification-container{
+    flex:1;
+    overflow-y:auto;
+    padding-right:10px;
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}

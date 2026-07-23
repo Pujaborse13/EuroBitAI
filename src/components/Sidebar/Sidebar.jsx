@@ -18,7 +18,7 @@ import {
   Lightbulb,
 } from "lucide-react";
 
-function Sidebar({ setCurrentPage }) {
+function Sidebar({ currentPage , setCurrentPage }) {
   return (
     <div className="sidebar">
 
@@ -43,12 +43,12 @@ function Sidebar({ setCurrentPage }) {
 
         <ul>
           <li
-            className="active"
+            className={currentPage === "dashboard" ? "active" : ""}
             onClick={() => setCurrentPage("dashboard")}
-          >
-            <LayoutDashboard size={16}/>
-            Dashboard
+            >
+            <LayoutDashboard size={16} />Dashboard
           </li>
+
 
           <li>
             <Monitor size={16} />Monitoring
@@ -82,7 +82,11 @@ function Sidebar({ setCurrentPage }) {
         </div>
 
         <ul>
-          <li><Bell size={16} /> Notifications</li>
+          <li className={currentPage === "notification" ? "active" : ""}
+            onClick={() => setCurrentPage("notification")}
+          >
+          <Bell size={16} />Notifications</li>
+         
           <li><FileText size={16} />Audit Trail</li>
         </ul>
 

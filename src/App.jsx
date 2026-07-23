@@ -6,16 +6,14 @@ import Navbar from "./components/Navbar/Navbar";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import PowerOf10 from "./pages/PowerOf10/PowerOf10";
 import Login from "./pages/Login/Login";
+import Notification from "./pages/Notifications/Notification";
 
 import "./App.css";
 
 function App() {
 
   const [loggedIn, setLoggedIn] = useState(false);
-
   const [currentPage, setCurrentPage] = useState("dashboard");
-
-  // NEW STATE
   const [showLogin, setShowLogin] = useState(false);
 
 
@@ -47,25 +45,24 @@ function App() {
     <div className="app">
 
       <Sidebar 
+        currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       />
 
 
       <div className="main">
 
-        <Navbar 
-          onUserClick={openLogin}
-        />
+      <Navbar
+        onUserClick={openLogin}
+        setCurrentPage={setCurrentPage}
+      />
 
+        {currentPage === "dashboard" && <Dashboard/>}
 
-        {currentPage === "dashboard" && 
-          <Dashboard/>
-        }
+        {currentPage === "power10" && <PowerOf10/>}
 
-
-        {currentPage === "power10" && 
-          <PowerOf10/>
-        }
+        {currentPage === "notification" && <Notification/>
+}
 
 
       </div>

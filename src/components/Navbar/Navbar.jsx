@@ -5,7 +5,7 @@ import {
   CircleUserRound,
 } from "lucide-react";
 
-function Navbar({onUserClick}) {
+function Navbar({onUserClick,setCurrentPage}) {
   return (
     <div className="navbar">
 
@@ -18,7 +18,7 @@ function Navbar({onUserClick}) {
         </div>
 
         {/* Notification */}
-        <div className="notification">
+        <div className="notification" onClick={()=>setCurrentPage("notification")}>
           <Bell size={22} /><span className="notification-dot"></span>
         </div>
 
