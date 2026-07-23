@@ -3,13 +3,9 @@
 =========================== */
 
 .power-container{
-
     width:100%;
-
-    min-height:100%;
-
-    padding:2px;
-
+    padding:30px 40px;
+    box-sizing:border-box;
 }
 
 /* ===========================
@@ -23,13 +19,14 @@
 
 }
 
-.title h1{
+.title h1,
+.title h2{
 
     font-size:30px;
     color:#1B4DB8;
     font-weight:700;
     margin:0;
-
+    font-family:inherit;
 
 }
 
@@ -43,13 +40,11 @@
 /* ===========================
    MAIN WRAPPER
 =========================== */
-
 .power-circle-wrapper{
     position:relative;
     width:820px;
-    height:680px;
-    margin:0 auto;
-
+    height:700px;
+    margin:40px auto 80px;
 }
 
 /* ===========================
@@ -145,5 +140,75 @@
     width:220px;
 
     padding:2px;
+
+}
+
+/*==================================
+   ARCHITECTURE SECTION
+===================================*/
+
+.architecture-section{
+
+    width:100%;
+    margin:80px auto;
+    text-align:center;
+
+}
+
+.architecture-card{
+
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.architecture-image{
+
+    width:100%;
+    height:auto;
+
+    display:block;
+
+}
+
+.tech-section{
+
+    width:100%;
+    margin:80px auto;
+    text-align:center;
+
+}
+
+.tech-card{
+
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.tech-image{
+
+    width:100%;
+    height:auto;
+
+    display:block;
 
 }

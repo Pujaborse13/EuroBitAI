@@ -1,6 +1,9 @@
 import "./PowerOf10.css";
 import CapabilityCard from "../../components/CapabilityCard/CapabilityCard";
 
+import Architecture from "../../assets/Architecture.png";
+import TechStack from "../../assets/TechStack.png";
+
 import {
   Bot,
   MessageSquare,
@@ -19,23 +22,25 @@ function PowerOf10() {
   return (
     <div className="power-container">
 
+      {/* ================= TITLE ================= */}
+
       <div className="title">
         <h1>THE POWER OF 10</h1>
         <p>Ten Intelligent Capabilities. One AI Assistant.</p>
       </div>
 
+      {/* ================= POWER OF 10 ================= */}
+
       <div className="power-circle-wrapper">
 
-        {/* TOP */}
         <CapabilityCard
-        className="card card1"
-        icon={<MessageSquare size={22} />}
-        title="Ask AI"
-        desc="Natural language conversations"
-        color="#1E88E5"
-    />
+          className="card card1"
+          icon={<MessageSquare size={22} />}
+          title="Ask AI"
+          desc="Natural language conversations"
+          color="#1E88E5"
+        />
 
-        {/* TOP RIGHT */}
         <div className="card card2">
           <CapabilityCard
             icon={<BookOpen size={22} />}
@@ -45,7 +50,6 @@ function PowerOf10() {
           />
         </div>
 
-        {/* RIGHT UPPER */}
         <div className="card card3">
           <CapabilityCard
             icon={<Monitor size={22} />}
@@ -55,7 +59,6 @@ function PowerOf10() {
           />
         </div>
 
-        {/* RIGHT LOWER */}
         <div className="card card4">
           <CapabilityCard
             icon={<Bell size={22} />}
@@ -65,7 +68,6 @@ function PowerOf10() {
           />
         </div>
 
-        {/* BOTTOM RIGHT */}
         <div className="card card5">
           <CapabilityCard
             icon={<Zap size={22} />}
@@ -75,7 +77,6 @@ function PowerOf10() {
           />
         </div>
 
-        {/* BOTTOM */}
         <div className="card card6">
           <CapabilityCard
             icon={<TrendingUp size={22} />}
@@ -85,7 +86,6 @@ function PowerOf10() {
           />
         </div>
 
-        {/* BOTTOM LEFT */}
         <div className="card card7">
           <CapabilityCard
             icon={<Ticket size={22} />}
@@ -95,7 +95,6 @@ function PowerOf10() {
           />
         </div>
 
-        {/* LEFT LOWER */}
         <div className="card card8">
           <CapabilityCard
             icon={<FileText size={22} />}
@@ -105,17 +104,15 @@ function PowerOf10() {
           />
         </div>
 
-        {/* LEFT UPPER */}
-            <div className="card card9">
-                <CapabilityCard
-                    icon={<AlertTriangle size={22} />}
-                    title="Incident Management"
-                    desc="Prioritize & Resolve"
-                    color="#EF5350"
-                />
-            </div>
+        <div className="card card9">
+          <CapabilityCard
+            icon={<AlertTriangle size={22} />}
+            title="Incident Management"
+            desc="Prioritize & Resolve"
+            color="#EF5350"
+          />
+        </div>
 
-        {/* TOP LEFT */}
         <div className="card card10">
           <CapabilityCard
             icon={<BrainCircuit size={22} />}
@@ -125,12 +122,10 @@ function PowerOf10() {
           />
         </div>
 
-        {/* CENTER CIRCLE */}
+        {/* CENTER */}
 
         <div className="outer-circle">
-
           <div className="inner-circle">
-
             <h1>10</h1>
 
             <Bot size={46} color="#2F80ED" />
@@ -138,13 +133,48 @@ function PowerOf10() {
             <h3>AI10 OPS</h3>
 
             <p>Your Intelligent IT Partner</p>
-
           </div>
-
         </div>
 
       </div>
 
+      {/* ================= SYSTEM ARCHITECTURE ================= */}
+
+        <section className="architecture-section">
+
+            <div className="title">
+                <h2>SYSTEM ARCHITECTURE</h2>
+                <p>Intelligent AI orchestration across enterprise systems</p>
+            </div>
+
+            <div className="architecture-card">
+                <img
+                    src={Architecture}
+                    alt="Architecture"
+                    className="architecture-image"
+                />
+            </div>
+
+        </section>
+
+      {/* ================= TECH STACK ================= */}
+
+        <section className="tech-section">
+
+            <div className="title">
+                <h2>TECHNOLOGY STACK</h2>
+                <p>Enterprise-grade technologies powering AI10 Ops</p>
+            </div>
+
+            <div className="tech-card">
+                <img
+                    src={TechStack}
+                    alt="Technology Stack"
+                    className="tech-image"
+                />
+            </div>
+
+        </section>
     </div>
   );
 }
