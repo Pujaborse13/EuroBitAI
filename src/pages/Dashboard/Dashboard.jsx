@@ -1,15 +1,32 @@
+import "./Dashboard.css";
+
+import AIAssistant from "../../components/AIAssistant/AIAssistant";
+import SystemHealth from "../../components/SystemHealth/SystemHealth";
+
+
 function Dashboard(){
 
-    return(
+return(
 
-        <div>
+<div className="dashboard">
 
-            <h1>Dashboard</h1>
+<div className="dashboard-layout">
 
-        </div>
 
-    )
+<AIAssistant/>
+
+
+<SystemHealth/>
+
+
+</div>
+
+
+</div>
+
+);
 
 }
+
 
 export default Dashboard;

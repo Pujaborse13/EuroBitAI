@@ -2,24 +2,28 @@
 
 padding:30px;
 
-}
+background:#F5F7FB;
 
-.power-image{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
+min-height:100%;
 
 }
 
-.power-image img{
 
-width:95%;
+.dashboard h1{
 
-border-radius:15px;
+color:#1F2937;
 
-box-shadow:0 10px 30px rgba(0,0,0,.15);
+margin-bottom:25px;
+
+}
+
+
+.dashboard-layout{
+
+display:grid;
+
+grid-template-columns: 2fr 1fr;
+
+gap:25px;
 
 }
