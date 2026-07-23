@@ -58,13 +58,18 @@ function App() {
         setCurrentPage={setCurrentPage}
       />
 
-        {currentPage === "dashboard" && <Dashboard/>}
+        <div className="page-content">
 
-        {currentPage === "power10" && <PowerOf10/>}
+        {currentPage === "dashboard" && <Dashboard />}
 
-        {currentPage === "notification" && <Notification/>}
+        {currentPage === "power10" && <PowerOf10 />}
+
+        {currentPage === "notification" && <Notification />}
 
         {currentPage === "users" && <Users />}
+
+      </div>
+
 
 
       </div>

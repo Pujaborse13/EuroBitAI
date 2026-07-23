@@ -4,7 +4,7 @@
 
 .power-container{
     width:100%;
-    padding:30px 40px;
+    padding:30px 40px 100px;
     box-sizing:border-box;
 }
 
@@ -43,8 +43,8 @@
 .power-circle-wrapper{
     position:relative;
     width:820px;
-    height:700px;
-    margin:40px auto 80px;
+    height:750px;
+    margin:40px auto 150px;
 }
 
 /* ===========================
