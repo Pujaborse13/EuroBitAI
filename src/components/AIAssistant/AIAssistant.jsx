@@ -139,8 +139,274 @@ function AIAssistant() {
      setResponse("");
         };
 
+const handleSuggestion = (type) => {
 
 
+    if(type === "infrastructure") {
+
+
+        setResponse(
+
+        <>
+
+
+        <div className="status-card">
+
+            <h4>🖥️ Infrastructure Health</h4>
+
+            <span className="severity low">
+                HEALTHY
+            </span>
+
+        </div>
+
+
+
+        <div className="section">
+
+            <h5>Status</h5>
+
+            <p>
+                All critical infrastructure components are operating normally.
+            </p>
+
+        </div>
+
+
+
+        <div className="section">
+
+            <h5>System Metrics</h5>
+
+            <ul>
+
+                <li>
+                    CPU Utilization : 48%
+                </li>
+
+                <li>
+                    Memory Usage : 62%
+                </li>
+
+                <li>
+                    Active Kubernetes Pods : 124
+                </li>
+
+                <li>
+                    Application Availability : 99.98%
+                </li>
+
+            </ul>
+
+
+        </div>
+
+
+
+        <div className="section">
+
+            <h5>AI Recommendation</h5>
+
+            <p>
+                No immediate action required. Continue monitoring application workloads.
+            </p>
+
+        </div>
+
+
+        </>
+
+        );
+
+
+    }
+
+
+
+    else if(type === "incidents") {
+
+
+
+        setResponse(
+
+        <>
+
+
+        <div className="status-card">
+
+            <h4>📋 Today's Incident Summary</h4>
+
+            <span className="severity medium">
+                5 INCIDENTS
+            </span>
+
+        </div>
+
+
+
+        <div className="section">
+
+            <h5>Summary</h5>
+
+            <p>
+                AI analyzed today's operational incidents and generated the summary.
+            </p>
+
+        </div>
+
+
+
+
+        <div className="section">
+
+            <h5>Incident Overview</h5>
+
+            <ul>
+
+                <li>
+                    Payment Gateway latency issue - Resolved
+                </li>
+
+                <li>
+                    Database connection timeout - Monitoring
+                </li>
+
+                <li>
+                    API authentication failure - Closed
+                </li>
+
+                <li>
+                    Batch processing delay - Investigating
+                </li>
+
+
+            </ul>
+
+
+        </div>
+
+
+
+
+        <div className="section">
+
+            <h5>AI Insight</h5>
+
+            <p>
+                Majority of incidents are related to database and service dependency performance.
+            </p>
+
+
+        </div>
+
+
+        </>
+
+        );
+
+
+
+    }
+
+
+
+    else if(type === "servers") {
+
+
+
+        setResponse(
+
+        <>
+
+
+        <div className="status-card">
+
+            <h4>🖧 Server Status Overview</h4>
+
+            <span className="severity low">
+                ONLINE
+            </span>
+
+        </div>
+
+
+
+
+        <div className="section">
+
+            <h5>Environment Status</h5>
+
+            <p>
+                All production servers are reachable.
+            </p>
+
+        </div>
+
+
+
+
+        <div className="section">
+
+
+            <h5>
+                Server Health
+            </h5>
+
+
+            <ul>
+
+                <li>
+                    Application Servers : 32/32 Healthy
+                </li>
+
+
+                <li>
+                    Database Servers : 8/8 Healthy
+                </li>
+
+
+                <li>
+                    Middleware Servers : 15/15 Healthy
+                </li>
+
+
+                <li>
+                    Failed Health Checks : 0
+                </li>
+
+
+            </ul>
+
+
+        </div>
+
+
+
+        <div className="section">
+
+            <h5>
+                Recommendation
+            </h5>
+
+
+            <p>
+                Continue normal operations. No server remediation required.
+            </p>
+
+
+        </div>
+
+
+        </>
+
+        );
+
+
+
+    }
+
+
+};
 return(
 
 
@@ -227,20 +493,18 @@ onClick={handleSend}
 
 <div className="suggestion-list">
 
-<div className="suggestion-card">
-
-🖥️ Infrastructure Health
+<div className="suggestion-card" onClick={()=>handleSuggestion("infrastructure")}
+>🖥️ Infrastructure Health
 
 </div>
 
 
-<div className="suggestion-card">
-
+<div className="suggestion-card" onClick={()=>handleSuggestion("incidents")}>
 📋 Summarize Today's Incidents
 
 </div>
 
-<div className="suggestion-card">
+<div className="suggestion-card" onClick={()=>handleSuggestion("servers")}>
 
 🖧 Check Status of All Servers
 
