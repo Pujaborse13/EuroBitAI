@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import PowerOf10 from "./pages/PowerOf10/PowerOf10";
 import Login from "./pages/Login/Login";
 import Notification from "./pages/Notifications/Notification";
+import Users from "./pages/Users/Users";
 
 import "./App.css";
 
@@ -61,8 +62,9 @@ function App() {
 
         {currentPage === "power10" && <PowerOf10/>}
 
-        {currentPage === "notification" && <Notification/>
-}
+        {currentPage === "notification" && <Notification/>}
+
+        {currentPage === "users" && <Users />}
 
 
       </div>

@@ -101,7 +101,8 @@ function Sidebar({ currentPage , setCurrentPage }) {
         </div>
 
         <ul>
-          <li><Users size={16}/>Users</li>
+          <li onClick={() => setCurrentPage("users")}>
+              <Users size={16}/> Users</li>
           <li><KeyRound size={16} />Role & Permissions</li>
           <li><Settings size={16} />Settings</li>
         </ul>
