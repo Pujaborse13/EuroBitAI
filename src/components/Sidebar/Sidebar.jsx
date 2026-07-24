@@ -50,8 +50,11 @@ function Sidebar({ currentPage , setCurrentPage }) {
           </li>
 
 
-          <li>
-            <Monitor size={16} />Monitoring
+          <li
+            className={currentPage === "Monitoring" ? "active" : ""}
+            onClick={() => setCurrentPage("Monitoring")}
+            >
+            <LayoutDashboard size={16} />Monitoring
           </li>
         </ul>
 
@@ -66,9 +69,24 @@ function Sidebar({ currentPage , setCurrentPage }) {
         </div>
 
         <ul>
-          <li><Lightbulb size={16} />Knowledge Sources</li>
-          <li><PlugZap size={16} />My Connectors</li>
-          <li><Server size={16} />My Infrastructure</li>
+         <li
+            className={currentPage === "KnowledgeSearch" ? "active" : ""}
+            onClick={() => setCurrentPage("KnowledgeSearch")}
+            >
+            <LayoutDashboard size={16} />Knowledge Source
+          </li>
+           <li
+            className={currentPage === "Connector" ? "active" : ""}
+            onClick={() => setCurrentPage("Connector")}
+            >
+            <LayoutDashboard size={16} />My Connector
+          </li>
+          <li
+            className={currentPage === "Infrastructure" ? "active" : ""}
+            onClick={() => setCurrentPage("Infrastructure")}
+            >
+            <LayoutDashboard size={16} />My Infrastructure
+          </li>
         </ul>
 
       </div>
@@ -87,7 +105,12 @@ function Sidebar({ currentPage , setCurrentPage }) {
           >
           <Bell size={16} />Notifications</li>
          
-          <li><FileText size={16} />Audit Trail</li>
+          <li
+            className={currentPage === "AuditTrail" ? "active" : ""}
+            onClick={() => setCurrentPage("AuditTrail")}
+            >
+            <LayoutDashboard size={16} />Audit Trail
+          </li>
         </ul>
 
       </div>
@@ -103,8 +126,18 @@ function Sidebar({ currentPage , setCurrentPage }) {
         <ul>
           <li onClick={() => setCurrentPage("users")}>
               <Users size={16}/> Users</li>
-          <li><KeyRound size={16} />Role & Permissions</li>
-          <li><Settings size={16} />Settings</li>
+          <li
+            className={currentPage === "RolePermission" ? "active" : ""}
+            onClick={() => setCurrentPage("RolePermission")}
+            >
+            <LayoutDashboard size={16} />Role & Permissions
+          </li>
+         <li
+            className={currentPage === "Settings" ? "active" : ""}
+            onClick={() => setCurrentPage("Settings")}
+            >
+            <LayoutDashboard size={16} />Settings
+          </li>
         </ul>
 
       </div>

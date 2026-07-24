@@ -1,180 +1,161 @@
-.navbar{
+/* Navbar */
 
-    height:72px;
-
-    flex-shrink:0;
-
-    background:white;
-
-    display:flex;
-
-    justify-content:flex-end;
-
-    align-items:center;
-
-    padding:0 30px;
-
-    border-bottom:1px solid #E5E7EB;
-
+.navbar {
+    height: 72px;
+    background: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: 1px solid #E5E7EB;
 }
+
 /* Right Side */
 
-.navbar-right{
-
-    display:flex;
-
-    align-items:center;
-
-    margin-left:auto;
-
-    gap:22px;
-
+.navbar-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 22px;
 }
 
 /* Search */
 
-.search-box{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    width:280px;
-
-    height:42px;
-
-    padding:0 15px;
-
-    background:#F5F7FB;
-
-    border:1px solid #E5E7EB;
-
-    border-radius:30px;
-
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 280px;
+    height: 42px;
+    padding: 0 15px;
+    background: #F5F7FB;
+    border: 1px solid #E5E7EB;
+    border-radius: 30px;
 }
 
-.search-box svg{
-
-    color:#6B7280;
-
+.search-box svg {
+    color: #6B7280;
 }
 
-.search-box input{
-
-    width:100%;
-
-    border:none;
-
-    outline:none;
-
-    background:transparent;
-
-    font-size:14px;
-
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
 }
 
 /* Notification */
 
-.notification{
-
-    position:relative;
-
-    width:42px;
-
-    height:42px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:#F5F7FB;
-
-    cursor:pointer;
-
-    transition:.3s;
-
+.notification {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F5F7FB;
+    cursor: pointer;
+    transition: .3s;
 }
 
-.notification:hover{
-
-    background:#E7ECF5;
-
+.notification:hover {
+    background: #E7ECF5;
 }
 
-.notification svg{
-
-    color:#374151;
-
+.notification svg {
+    color: #374151;
 }
 
-.notification-dot{
-
-    position:absolute;
-
-    top:10px;
-
-    right:10px;
-
-    width:8px;
-
-    height:8px;
-
-    background:#EF4444;
-
-    border-radius:50%;
-
+.notification-dot {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    background: #EF4444;
+    border-radius: 50%;
 }
 
 /* User */
 
-.user-profile{
-
-    position:relative;
-
-    width:42px;
-
-    height:42px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    cursor:pointer;
-
+.user-profile {
+    position: relative;
 }
 
-.user-icon{
-
-    color:#374151;
-
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
 }
 
-.user-name{
+.user-icon {
+    color: #2563EB;
+}
 
-    position:absolute;
+.user-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #374151;
+}
 
-    top:30px;
+/* Dropdown */
 
-    left:50%;
+.profile-dropdown {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 220px;
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    overflow: hidden;
+    z-index: 1000;
+    animation: dropdown .25s ease;
+}
 
-    transform:translateX(-50%);
+@keyframes dropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
 
-    width:max-content;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-    font-size:11px;
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 14px;
+    color: #374151;
+}
 
-    font-weight:600;
+.dropdown-item:hover {
+    background: #F3F4F6;
+}
 
-    color:#374151;
+.dropdown-item svg {
+    color: #6B7280;
+}
 
-    white-space:nowrap;
+.logout {
+    color: #DC2626;
+}
 
+.logout svg {
+    color: #DC2626;
+}
+
+.logout:hover {
+    background: #FEE2E2;
 }

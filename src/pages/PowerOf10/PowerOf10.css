@@ -22,7 +22,7 @@
 .title h1,
 .title h2{
 
-    font-size:30px;
+    font-size:32px;
     color:#1B4DB8;
     font-weight:700;
     margin:0;
@@ -135,6 +135,7 @@
 
 }
 
+
 .capability-card{
 
     width:220px;
@@ -170,7 +171,58 @@
     box-shadow:0 10px 30px rgba(0,0,0,.08);
 
 }
+/*==================================
+   AI CAPABILITIES IMAGE SECTION
+===================================*/
 
+/*==================================
+   AI CAPABILITIES IMAGE SECTION
+===================================*/
+
+.capabilities-section{
+
+    width:100%;
+    margin:80px auto;
+    text-align:center;
+
+}
+
+
+.capability-image-card{
+
+    width:100%;
+    max-width:1200px;
+
+    margin:30px auto;
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:40px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+.capability-image{
+
+    width:650px;       /* image size */
+    max-width:90%;     /* responsive */
+
+    height:auto;
+
+    display:block;
+
+    margin:auto;
+
+}
 .architecture-image{
 
     width:100%;
