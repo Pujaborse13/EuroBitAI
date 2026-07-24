@@ -61,25 +61,37 @@ const initialServers = [
 export default function Infrastructure() {
   const [servers, setServers] = useState(initialServers);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setServers((prev) =>
-        prev.map((server) => ({
+useEffect(() => {
+  const timer = setInterval(() => {
+    setServers((prev) =>
+      prev.map((server) => {
+        const cpu = Math.max(
+          0,
+          Math.min(100, server.cpu + Math.floor(Math.random() * 11) - 5)
+        );
+
+        const memory = Math.max(
+          0,
+          Math.min(100, server.memory + Math.floor(Math.random() * 11) - 5)
+        );
+
+        return {
           ...server,
-          cpu: Math.floor(Math.random() * 100),
-          memory: Math.floor(Math.random() * 100),
+          cpu,
+          memory,
           status:
-            Math.random() > 0.85
+            cpu >= 85
               ? "Critical"
-              : Math.random() > 0.70
+              : cpu >= 70
               ? "Warning"
               : "Healthy",
-        }))
-      );
-    }, 2000);
+        };
+      })
+    );
+  }, 5000); // every 5 seconds
 
-    return () => clearInterval(timer);
-  }, []);
+  return () => clearInterval(timer);
+}, []);
 
   const getColor = (value) => {
     if (value >= 80) return "#ef4444";
@@ -91,6 +103,14 @@ export default function Infrastructure() {
     <div className="infra-page">
       <h2>Infrastructure Inventory</h2>
       <p>Real-time monitoring of enterprise infrastructure.</p>
+
+      <br></br>
+      
+        <button className="add-user-btn">
+          + Add Server
+        </button>
+        <br></br>
+        <br></br>
 
       <table className="infra-table">
         <thead>

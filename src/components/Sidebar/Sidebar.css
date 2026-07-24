@@ -3,7 +3,7 @@
 =========================== */
 
 .sidebar {
-  width: 250px;
+  width: 320px;
   height: 100vh;
   background: linear-gradient(
     180deg,
@@ -19,6 +19,7 @@
   box-sizing: border-box;
   overflow: auto;
   border-right: 1px solid rgba(255,255,255,0.08);
+
 }
 
 /* ===========================
@@ -66,12 +67,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  margin: 18px 0 10px;
+  margin: 16px 0 10px;
   color: #acbfee;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-size: 10px;      /* Smaller */
+  font-weight: 400;     /* Less bold */
+  letter-spacing: 0.8px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .section-title svg {

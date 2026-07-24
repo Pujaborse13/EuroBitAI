@@ -38,7 +38,7 @@ function Sidebar({ currentPage , setCurrentPage }) {
 
       <div className="menu-group">
         <div className="section-title">
-          <ChartColumn size={18} /><span>OVERVIEW</span>
+          <ChartColumn size={10} /><span>OVERVIEW</span>
         </div>
 
         <ul>
